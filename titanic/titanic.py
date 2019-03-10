@@ -49,6 +49,7 @@ import numpy as np
 from sklearn.model_selection import cross_val_score
 # 使用 K 折交叉验证 统计决策树准确率
 print(u'cross_val_score 准确率为 %.4lf' % np.mean(cross_val_score(clf, train_features, train_labels, cv=10)))
-
-git remote add origin https://github.com/kobefaith/datamine.git
-
+from sklearn import tree
+with open("titanicData.dot","w") as f:
+    f = tree.export_graphviz(clf,feature_names=dvec.get_feature_names(),out_file=f)
+dot titanicData.dot -T png -o titanicData.png
