@@ -50,8 +50,8 @@ def load_data(base_path):
                 documents.append(' '.join(words))
     return documents, labels
 
-train_contents, train_labels = load_data('./text_classification/1/test')
-test_contents, test_labels = load_data('./text_classification/1/test2')
+train_contents, train_labels = load_data('./text_classification/train')
+test_contents, test_labels = load_data('./text_classification/test')
 stop_words = []
 # with open('./text_classification/stop/stopword.txt') as f:
 # 	for line in f.readlines():
